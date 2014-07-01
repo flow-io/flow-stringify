@@ -21,6 +21,11 @@ var sStream = require( 'flow-stringify' );
 var stream = sStream()
 	.stream( onError );
 
+// Add a listener:
+stream.on( 'data', function( data ) {
+	console.log( JSON.stringify( data ) );
+});
+
 // Write data to the stream:
 stream.write( { 'x': 0, 'y': 0 } );
 stream.end();
