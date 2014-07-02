@@ -14,17 +14,14 @@ $ npm install flow-stringify
 ## Examples
 
 ``` javascript
-// Flow stringify generator:
 var sStream = require( 'flow-stringify' );
 
 // Create a new stream, passing along an optional error handler:
 var stream = sStream()
 	.stream( onError );
 
-// Add a listener:
-stream.on( 'data', function( data ) {
-	console.log( JSON.stringify( data ) );
-});
+// Setup the pipeline:
+stream.pipe( process.stdout );
 
 // Write data to the stream:
 stream.write( { 'x': 0, 'y': 0 } );
