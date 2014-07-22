@@ -1,6 +1,6 @@
 {
   "name": "flow-stringify",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Thin wrapper for JSON stream stringify.",
   "author": {
     "name": "Athan Reines",
